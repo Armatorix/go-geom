@@ -165,6 +165,7 @@ func WriteFlatCoords1(w io.Writer, byteOrder binary.ByteOrder, coords []float64,
 
 // WriteFlatCoords2 writes flat coordinates 2.
 func WriteFlatCoords2(w io.Writer, byteOrder binary.ByteOrder, flatCoords []float64, ends []int, stride int) error {
+	fmt.Println("XDD")
 	if err := WriteUInt32(w, byteOrder, uint32(len(ends))); err != nil {
 		return err
 	}
